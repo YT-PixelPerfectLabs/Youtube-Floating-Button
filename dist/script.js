@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Create button element
   const ytButton = document.createElement("a");
-  ytButton.href = "https://www.youtube.com/@PixelPerfectLabs";
+  ytButton.href = "https://linkly.link/2CJtA";
   ytButton.target = "_blank";
   ytButton.className = "youtube-button";
 
