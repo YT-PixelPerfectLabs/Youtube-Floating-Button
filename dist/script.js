@@ -10,7 +10,7 @@
      └─────────────────────────────────────────┘
   ============================================================ */
 
-  const SHOW_DELAY = 2000; // milliseconds before toast drops in
+  const SHOW_DELAY = 5000; // milliseconds before toast drops in
 
   /* ── Shared brand tokens ── */
   const T = {
