@@ -10,14 +10,14 @@
      └─────────────────────────────────────────┘
   ============================================================ */
 
-  const SHOW_DELAY = 5000; // milliseconds before toast drops in
+  const SHOW_DELAY = 2000; // milliseconds before toast drops in
 
   /* ── Shared brand tokens ── */
   const T = {
     bg: "#0a0a0a",
     ink: "#f0ede6",
     accent: "#b1b2ae",
-    muted: "rgba(213, 213, 213, 0.40)",
+    muted: "rgba(213, 213, 213, 0.35)",
     border: "rgba(240,237,230,0.08)",
     grid: "rgba(255,255,255,0.03)",
     yt: "https://linkly.link/2CJtA",
@@ -26,7 +26,7 @@
 
   /* ── Shared SVGs ── */
   const SVG_YT = `<svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>`;
-  const SVG_IG = `<svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm10 2H7a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3zm-5 3.5a5.5 5.5 0 110 11 5.5 5.5 0 010-11zm0 2a3.5 3.5 0 100 7 3.5 3.5 0 000-7zM19 6.5a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z"/></svg>`;
+  const SVG_IG = `<svg viewBox="0 0 24 24" fill="#ffffff" width="16" height="16"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm10 2H7a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3zm-5 3.5a5.5 5.5 0 110 11 5.5 5.5 0 010-11zm0 2a3.5 3.5 0 100 7 3.5 3.5 0 000-7zM19 6.5a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z"/></svg>`;
 
   /* ── Shared base CSS ── */
   const BASE_CSS = `
@@ -57,14 +57,14 @@
       border-color: rgb(255 0 0 / 56%);
     }
     .pp-btn-ig {
-      background: rgba(240,237,230,0.05);
-      border-color: ${T.border};
-      color: ${T.muted};
+      background: linear-gradient(135deg, rgb(131 58 180 / 14%), rgb(225 48 108 / 14%), rgb(253 121 36 / 14%));
+      border-color: rgb(225 48 108 / 30%);
+      color: #f0ede6;
     }
     .pp-btn-ig:hover {
-      background: rgba(240,237,230,0.1);
-      border-color: rgba(240,237,230,0.2);
-      color: ${T.ink};
+      background: linear-gradient(135deg, rgb(131 58 180 / 25%), rgb(225 48 108 / 25%), rgb(253 121 36 / 25%));
+      border-color: rgb(225 48 108 / 60%);
+      color: #ffffff;
     }
     .pp-close {
       background: rgba(240,237,230,0.1);
@@ -168,7 +168,7 @@
       }
       .pp-toast-actions .pp-btn-yt,
       .pp-toast-actions .pp-btn-ig { padding: 9px 16px; white-space: nowrap; }
-      .pp-toast-actions .pp-close  { padding: 9px 14px; }
+      .pp-toast-actions .pp-close  { padding: 9px 10px; display: flex; align-items: center; justify-content: center; }
 
       /* ── Row 2: copy — full width ── */
       .pp-toast-copy {
@@ -248,7 +248,7 @@
             <div class="pp-toast-actions">
               <a class="pp-btn-yt" href="${T.yt}" target="_blank" rel="noopener">${SVG_YT} Subscribe</a>
               <a class="pp-btn-ig" href="${T.ig}" target="_blank" rel="noopener">${SVG_IG} Follow</a>
-              <button class="pp-close" id="ppClose">✕ Close</button>
+              <button class="pp-close" id="ppClose" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
             </div>
           </div>
           <div class="pp-toast-copy">
