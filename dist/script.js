@@ -1,6 +1,6 @@
 (() => {
   /* ============================================================
-     PIXEL PERFECT — CodePen Channel Widget (Toast only)
+     PIXEL GRID UI — CodePen Channel Widget (Toast only)
      CDN: https://cdn.jsdelivr.net/gh/YT-PixelPerfectLabs/
           Youtube-Floating-Button/dist/script.js
 
@@ -21,7 +21,7 @@
     border: "rgba(240,237,230,0.08)",
     grid: "rgba(255,255,255,0.03)",
     yt: "https://linkly.link/2CJtA",
-    ig: "https://www.instagram.com/pixelperfectlabs.ig",
+    ig: "https://www.instagram.com/pixelgridui",
   };
 
   /* ── Shared SVGs ── */
@@ -243,7 +243,7 @@
           <div class="pp-toast-row1">
             <div class="pp-toast-stripe"></div>
             <div class="pp-toast-brand">
-              <div class="pp-toast-brand-name">PIXEL<br/><em>PERFECT</em></div>
+              <div class="pp-toast-brand-name">PIXEL<br/><em>GRID</em></div>
             </div>
             <div class="pp-toast-actions">
               <a class="pp-btn-yt" href="${T.yt}" target="_blank" rel="noopener">${SVG_YT} Subscribe</a>
@@ -256,9 +256,9 @@
             <div class="pp-toast-copy-sub">G sap · ScrollTrigger · Creative CSS</div>
           </div>
         </div>
-        <button class="pp-reopen" id="ppReopen" aria-label="Reopen Pixel Perfect widget">
+        <button class="pp-reopen" id="ppReopen" aria-label="Reopen Pixel Grid widget">
           <span class="pp-reopen-dot"></span>
-          <span class="pp-reopen-label">Pixel Perfect</span>
+          <span class="pp-reopen-label">Pixel Grid UI</span>
         </button>
       </div>
     `;
@@ -271,7 +271,7 @@
       const close = document.getElementById("ppClose");
 
       if (!toast || !reopen || !close) {
-        console.warn("[Pixel Perfect Widget] Toast elements not found.");
+        console.warn("[Pixel Grid UI Widget] Toast elements not found.");
         return;
       }
 
