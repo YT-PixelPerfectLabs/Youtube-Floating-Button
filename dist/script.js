@@ -20,8 +20,8 @@
     muted: "rgba(213, 213, 213, 0.35)",
     border: "rgba(240,237,230,0.08)",
     grid: "rgba(255,255,255,0.03)",
-    yt: "https://linkly.link/2CJtA",
-    ig: "https://www.instagram.com/pixelgridui",
+    yt: "https://www.youtube.com/@pixelgridui",
+    ig: "https://www.instagram.com/pixelgridui/",
   };
 
   /* ── Shared SVGs ── */
